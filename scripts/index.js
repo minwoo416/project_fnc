@@ -13,8 +13,14 @@ const artistMore = document.querySelector('.introduce .introduce_bottom .artist_
 /* 3행 비지니스 */
 const businessCate = document.querySelectorAll('.business .business_title li');
 const business = document.querySelectorAll('.business .business_all_wrap .business_wrap');
+const businessImg = document.querySelectorAll('.business .business_all_wrap .business_wrap .business_img');
+const businessH3 = document.querySelectorAll('.business .business_all_wrap .business_wrap .business_content h3')
+const businessP = document.querySelectorAll('.business .business_all_wrap .business_wrap .business_content p')
+/* 5행 ad */
+const adMain = document.querySelector('.ad .ad_content .main_content');
+const adSub = document.querySelector('.ad .ad_content .sub_content');
 
-console.log(introduceTop,introduceBottom,artistMore,businessCate,business);
+console.log(introduceTop,introduceBottom,artistMore,businessCate,business,adMain,adSub,business[0].children[1]);
 /* 푸터 */
 const footer = document.querySelector('footer');
 /* ---초기 배너 보이기--- */
@@ -46,6 +52,36 @@ main.on('slideChange',()=>{
         obj.classList.remove('introduce2');
     });
     }
+    /* 3행일때 */
+    if(main.activeIndex == 2){
+        businessImg.forEach((img)=>{
+            img.classList.add('opa')
+        })
+        businessH3.forEach((obj)=>{
+            obj.classList.add('in')
+        })
+        businessP.forEach((obj)=>{
+            obj.classList.add('in')
+        })
+    }else {
+        businessImg.forEach((img)=>{
+            img.classList.remove('opa')
+        })
+        businessH3.forEach((obj)=>{
+            obj.classList.remove('in')
+        })
+        businessP.forEach((obj)=>{
+            obj.classList.remove('in')
+        })
+    }
+    /* 5행에 왔을때 */
+    if(main.activeIndex == 4){
+        adMain.classList.add('ad_active')
+        adSub.classList.add('ad_active')
+    }else {
+        adMain.classList.remove('ad_active');
+        adSub.classList.remove('ad_active');
+    }
     /* 6행에 왔을때 풋터 */
     if(main.activeIndex == 5){
         footer.classList.add('active')
@@ -55,7 +91,7 @@ main.on('slideChange',()=>{
 })
 /* 3행 비지니스 카테고리 클릭시 내용 변경 */
 /* 초기값*/
-businessCate[0].style.borderBottom = '3px solid #E54132'
+businessCate[0].classList.add('active');
 business[0].style.display = 'flex';
 function businessHidden(){
     business.forEach((obj)=>{
@@ -64,13 +100,13 @@ function businessHidden(){
 }
 function businessCateHidden(){
     businessCate.forEach((obj)=>{
-        obj.style.borderBottom = '1px solid #949494';
+        obj.classList.remove('active');
     })
 }
 businessCate.forEach((cate,idx)=>{
     cate.addEventListener('click',()=>{
         businessCateHidden()
-        cate.style.borderBottom = '3px solid #E54132';
+        cate.classList.add('active');
         businessHidden()
         business.forEach((obj,index)=>{
             if(idx == index){
