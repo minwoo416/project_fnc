@@ -3,6 +3,10 @@ const main = new Swiper('main .swiper',{
     mousewheel:true,
 })
 /* -----------변수모음---------- */
+/* 헤더 */
+const menu = document.querySelector('header .menu');
+const hiddenMenu = document.querySelector('header .hidden_container');
+const menuClose = document.querySelector('header .hidden_container .hidden_menu_close');
 /* 배너 */
 const bannerImg = document.querySelectorAll('.banner img');
 /* 2행 연예인 */
@@ -122,5 +126,12 @@ introduce.forEach((obj)=>{
     })
     obj.addEventListener('mouseout',()=>{
         obj.children[1].style.display = 'none';
+    })
+})
+/* 헤더 메뉴 */
+menu.addEventListener('click',()=>{
+    hiddenMenu.style.display = 'block';
+    menuClose.addEventListener('click',()=>{
+        hiddenMenu.style.display = 'none';
     })
 })
