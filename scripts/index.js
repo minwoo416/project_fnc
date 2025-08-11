@@ -130,8 +130,10 @@ introduce.forEach((obj)=>{
 })
 /* 헤더 메뉴 */
 menu.addEventListener('click',()=>{
-    hiddenMenu.style.display = 'block';
+    /* hiddenMenu.style.display = 'block'; */
+    hiddenMenu.classList.add('active');
     menuClose.addEventListener('click',()=>{
-        hiddenMenu.style.display = 'none';
+        /* hiddenMenu.style.display = 'none'; */
+        hiddenMenu.classList.remove('active');
     })
 })

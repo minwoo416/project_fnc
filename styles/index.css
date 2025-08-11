@@ -26,7 +26,14 @@ header .header_container .right_wrap .hidden_container {
     top:0;
     left:50%; transform:translateX(-50%);
     width:100%; height:100vh; background:rgba(0,0,0,0.7);
-    display:none;
+    opacity: 0;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center; /* 가운데 기준으로 확장 */
+    transition: all 1s ease;
+}
+header .header_container .right_wrap .hidden_container.active {
+    transform: translateX(-50%) scaleX(1);
+    opacity: 1;
 }
 header .header_container .right_wrap .hidden_container .hidden_menu {
     position:absolute;
@@ -159,14 +166,13 @@ main .swiper .swiper-wrapper .introduce .introduce_all_container .introduce_bott
     color:#fff;
     font-size:0.75rem;
 }
+/* 아티스트 더보기 */
 main .swiper .swiper-wrapper .introduce .introduce_all_container .introduce_bottom .artist_more {
     position:relative;
     opacity:0;
-    
 }
 main .swiper .swiper-wrapper .introduce .introduce_all_container .introduce_bottom .artist_more.more {
-    opacity:1;
-    transition:all 1s linear;
+    animation:opa 3s both 2.5s;
 }
 main .swiper .swiper-wrapper .introduce .introduce_all_container .introduce_bottom .artist_more .artist_more_photo {}
 main .swiper .swiper-wrapper .introduce .introduce_all_container .introduce_bottom .artist_more .introduce_photo03 {
@@ -186,6 +192,11 @@ main .swiper .swiper-wrapper .introduce .introduce_all_container .introduce_bott
     padding:10px 30px;
     width:max-content;
     color:#fff;
+}
+main .swiper .swiper-wrapper .introduce .introduce_all_container .introduce_bottom .artist_more .artist_more_content a:hover {
+    border:1px solid #E43025;
+    background:#fff;
+    color:#E43025;
 }
 /* ------------------------------------------3행 비지니스---------------------------------------------------- */
 main .business {
