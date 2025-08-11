@@ -62,7 +62,7 @@ main .swiper .swiper-wrapper {}
 main .swiper .swiper-wrapper .swiper-slide {}
 /* ------------------------------------------1행 배너---------------------------------------------------- */
 main .swiper .swiper-wrapper .banner {
-    display:flex; height:100vh;
+    display:flex; height:100vh; width:100%;
 }
 main .swiper .swiper-wrapper .banner img {
     display:block; width:100%;
@@ -99,7 +99,7 @@ main .swiper .swiper-wrapper .introduce .introduce_all_container .introduce_top.
 main .swiper .swiper-wrapper .introduce .introduce_all_container .introduce_top .introduce_wrap {
     position:relative;
 }
-main .swiper .swiper-wrapper .introduce .introduce_all_container .introduce_top .introduce_wrap .introduce_photo {}
+main .swiper .swiper-wrapper .introduce .introduce_all_container .introduce_top .introduce_wrap .introduce_photo {width:100%;}
 main .swiper .swiper-wrapper .introduce .introduce_all_container .introduce_top .introduce_wrap .introduce_photo01 {
     background:url(../images/Introduction_top01.jpg) no-repeat; 
     width:750px; height:500px;
