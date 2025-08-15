@@ -1,0 +1,34 @@
+main {padding:50px 0;}
+main .artists_container {max-width:1520px; margin:50px auto;}
+main .artists_container .category {
+    display:flex; justify-content:center; gap:30px;
+    margin-bottom:150px;
+}
+main .artists_container .category li {font-size:1.563rem;}
+main .artists_container .category li button {}
+main .company_container .category li button.active {
+    font-weight:800;
+    border-bottom:1px solid #000;
+}
+main .artists_container .artists_wrap {}
+main .artists_container .artists_wrap .singer {}
+main .artists_container .artists_wrap .singer ul {}
+main .artists_container .artists_wrap .singer ul li {width:400px; position:relative;}
+main .artists_container .artists_wrap .singer ul li a {}
+main .artists_container .artists_wrap .singer ul li a img {width:100%; display:block;}
+main .artists_container .artists_wrap .singer ul li .back {
+    position:absolute;
+    left:50%; top:50%; transform:translate(-50%,-50%);
+    width:100%; background:rgba(0,0,0,0.7); height:100%;
+}
+main .artists_container .artists_wrap .singer ul li .back .content {
+    position:absolute;
+    left:50%; top:50%; transform:translate(-50%,-50%);
+}
+main .artists_container .artists_wrap .singer ul li .back .content .name {
+    font-size:1.563rem; font-weight:700;
+    color:#fff;
+}
+main .artists_container .artists_wrap .singer ul li .back .content .user_sns {}
+main .artists_container .artists_wrap .singer ul li .back .content .user_sns a {}
+main .artists_container .artists_wrap .singer ul li .back .content .user_sns a img {}
