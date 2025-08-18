@@ -6,29 +6,123 @@ main .artists_container .category {
 }
 main .artists_container .category li {font-size:1.563rem;}
 main .artists_container .category li button {}
-main .company_container .category li button.active {
+main .artists_container .category li button.active {
     font-weight:800;
     border-bottom:1px solid #000;
 }
 main .artists_container .artists_wrap {}
-main .artists_container .artists_wrap .singer {}
-main .artists_container .artists_wrap .singer ul {}
+/* 가수 */
+main .artists_container .artists_wrap .singer {/*  잠깐 숨기기  */ /* display:none; */}
+main .artists_container .artists_wrap .singer ul {
+    display:flex; flex-flow:row wrap; column-gap:100px; row-gap:100px;
+}
 main .artists_container .artists_wrap .singer ul li {width:400px; position:relative;}
-main .artists_container .artists_wrap .singer ul li a {}
-main .artists_container .artists_wrap .singer ul li a img {width:100%; display:block;}
+main .artists_container .artists_wrap .singer ul li:hover .back {
+    display:block;
+}
+main .artists_container .artists_wrap .singer ul li > a {}
+main .artists_container .artists_wrap .singer ul li > a img {width:100%; display:block;}
+/* 후버시 이름과 sns등장 */
 main .artists_container .artists_wrap .singer ul li .back {
     position:absolute;
-    left:50%; top:50%; transform:translate(-50%,-50%);
+    /* left:50%; top:50%; transform:translate(-50%,-50%); */
+    left:0; top:0;
     width:100%; background:rgba(0,0,0,0.7); height:100%;
+    display:none;
 }
 main .artists_container .artists_wrap .singer ul li .back .content {
     position:absolute;
-    left:50%; top:50%; transform:translate(-50%,-50%);
+    left:50%; top:140px; transform:translateX(-50%);
+    width:100%;
+    text-align:center;
 }
-main .artists_container .artists_wrap .singer ul li .back .content .name {
+main .artists_container .artists_wrap .singer ul li .back .content > a {} 
+main .artists_container .artists_wrap .singer ul li .back .content > a .name {
     font-size:1.563rem; font-weight:700;
     color:#fff;
+    margin-bottom:50px;
+    width:100%;
 }
-main .artists_container .artists_wrap .singer ul li .back .content .user_sns {}
-main .artists_container .artists_wrap .singer ul li .back .content .user_sns a {}
-main .artists_container .artists_wrap .singer ul li .back .content .user_sns a img {}
+main .artists_container .artists_wrap .singer ul li .back .content .user_sns {
+    display:flex; flex-flow:row nowrap; gap:20px; justify-content:center;
+}
+main .artists_container .artists_wrap .singer ul li .back .content .user_sns a {
+    width:30px; height:30px; display:block;
+}
+main .artists_container .artists_wrap .singer ul li .back .content .user_sns a img {width:100%; display:block;}
+/* 배우 */
+main .artists_container .artists_wrap .actor {/* 초기숨기기 */ display:none;}
+main .artists_container .artists_wrap .actor ul {
+    display:flex; flex-flow:row wrap; column-gap:100px; row-gap:100px;
+}
+main .artists_container .artists_wrap .actor ul li {width:300px; position:relative;}
+main .artists_container .artists_wrap .actor ul li:hover .back {
+    display:block;
+}
+main .artists_container .artists_wrap .actor ul li > a {}
+main .artists_container .artists_wrap .actor ul li a img {width:100%; display:block;}
+/* 후버시 이름과 sns등장 */
+main .artists_container .artists_wrap .actor ul li .back {
+    position:absolute;
+    left:0; top:0;
+    width:100%; background:rgba(0,0,0,0.7); height:100%;
+    display:none;
+}
+main .artists_container .artists_wrap .actor ul li .back .content {
+    position:absolute;
+    left:0; top:140px;
+    width:100%;
+    text-align:center;
+}
+main .artists_container .artists_wrap .actor ul li .back .content > a {}
+main .artists_container .artists_wrap .actor ul li .back .content > a .name {
+    font-size:1.563rem; font-weight:700;
+    color:#fff;
+    width:100%;
+    margin-bottom:50px;
+}
+main .artists_container .artists_wrap .actor ul li .back .content .user_sns {
+    display:flex; flex-flow:row nowrap; gap:20px; justify-content:center;
+}
+main .artists_container .artists_wrap .actor ul li .back .content .user_sns a {
+    width:30px; height:30px; display:block;
+}
+main .artists_container .artists_wrap .actor ul li .back .content .user_sns a img {width:100%; display:block;}
+/* 엔터테이너 */
+main .artists_container .artists_wrap .entertainer {/* 초기숨기기 */ display:none;}
+main .artists_container .artists_wrap .entertainer ul {
+    display:flex; flex-flow:row wrap; column-gap:100px; row-gap:100px;
+}
+main .artists_container .artists_wrap .entertainer ul li {width:300px; position:relative;}
+main .artists_container .artists_wrap .entertainer ul li:hover .back {
+    display:block;
+}
+main .artists_container .artists_wrap .entertainer ul li > a {}
+main .artists_container .artists_wrap .entertainer ul li a img {width:100%; display:block;}
+/* 후버시 이름과 sns등장 */
+main .artists_container .artists_wrap .entertainer ul li .back {
+    position:absolute;
+    left:0; top:0;
+    width:100%; background:rgba(0,0,0,0.7); height:100%;
+    display:none;
+}
+main .artists_container .artists_wrap .entertainer ul li .back .content {
+    position:absolute;
+    left:0; top:140px;
+    width:100%;
+    text-align:center;
+}
+main .artists_container .artists_wrap .entertainer ul li .back .content > a {}
+main .artists_container .artists_wrap .entertainer ul li .back .content > a .name {
+    font-size:1.563rem; font-weight:700;
+    color:#fff;
+    width:100%;
+    margin-bottom:50px;
+}
+main .artists_container .artists_wrap .entertainer ul li .back .content .user_sns {
+    display:flex; flex-flow:row nowrap; gap:20px; justify-content:center;
+}
+main .artists_container .artists_wrap .entertainer ul li .back .content .user_sns a {
+    width:30px; height:30px; display:block;
+}
+main .artists_container .artists_wrap .entertainer ul li .back .content .user_sns a img {width:100%; display:block;}

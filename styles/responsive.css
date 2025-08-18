@@ -1,6 +1,17 @@
 /* 데스크탑 1920 ~ 1250 */
 /* 테블릿 1249 ~ 850 */
 /* 모바일 849 ~ 320 */
+@media screen and (max-width:1420px){
+    main .artists_container .artists_wrap .singer ul {
+        justify-content:center;
+    }
+    main .artists_container .artists_wrap .actor ul {
+        justify-content:center;
+    }
+    main .artists_container .artists_wrap .entertainer ul {
+        justify-content:center;
+    }
+}
 @media screen and (max-width:1249px){
     /* 헤더 */
     header {padding:0 100px;}
@@ -88,6 +99,12 @@
     /* 풋터 */
     footer {padding:30px 50px;}
     footer .footer_container {flex-flow:column nowrap; align-items:start; gap:30px;}
+    /* 서브페이지 - 컴퍼니 */
+    main .company_container {padding:0 20px;}
+    main .company_container .company_wrap .about {
+        flex-direction:column;
+    }
+    main .company_container .company_wrap .about .about_content p {font-size:1rem;}
 }
 @media screen and (max-width:700px){
     main .media .media_all_container .media_container .media_wrap .media_list {justify-content:center; gap:20px;}
@@ -106,11 +123,17 @@
     main .swiper .swiper-wrapper .introduce .introduce_all_container .introduce_bottom .artist_more.more {
     animation:opa 3s both 1s;
     }
+    /* 4행 */
+    /* main .release .release_all_container .release_container .release_wrap .release_list li:nth-of-type(2), */
+    main .release .release_all_container .release_container .release_wrap .release_list li:nth-of-type(3) {display:none;}
     /* 6행 */
     main .media .media_all_container .media_container .media_wrap .media_list li:nth-of-type(3) { display:none;}
     main .media .media_all_container .media_container .media_wrap .media_list li:nth-of-type(4) { display:none;}
     footer .footer_container {flex-flow:row nowrap; align-items:center; gap:30px;}
     footer .footer_container .info_wrap {display:none;}
+    /* 서브페이지-아티스트 */
+    main .artists_container .category {flex-flow:row wrap;}
+    main .artists_container .category li {font-size:1.125rem;}
 }
 @media screen and (max-width:380px){
     footer .footer_container .site_map_wrap {display:none;}

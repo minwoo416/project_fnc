@@ -79,7 +79,7 @@ main .company_container .company_wrap .about {
     display:flex; justify-content:center; align-items:center; gap:50px;
 }
 main .company_container .company_wrap .about .fnc_logo {}
-main .company_container .company_wrap .about .fnc_logo img {}
+main .company_container .company_wrap .about .fnc_logo img {display:block; width:100%;}
 main .company_container .company_wrap .about .about_content {}
 main .company_container .company_wrap .about .about_content p {
     line-height:1.5;

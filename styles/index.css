@@ -193,7 +193,6 @@ main .business .business_all_container .business_container .business_all_wrap .b
 }
 /* ------------------------------------------4행 새로운소식---------------------------------------------------- */
 main .release {
-
     display:flex; justify-content:center; align-items:center;
 }
 main .release .release_all_container {text-align:center;}
